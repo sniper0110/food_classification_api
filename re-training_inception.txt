@@ -18,5 +18,5 @@ python tensorflow/examples/image_retraining/retrain.py \
 #               (softmax) layer, it will be re-computed when we retrain inception.
 # retrain.py : is the python script used by tensorflow to retrain inception.  
 # retrained_graph.pb : the retrained graph.
-# retrained_labels.txt : a text file containing the labels the different 11 categories of
+# retrained_labels.txt : a text file containing the labels of the different 11 categories of
 # food.
