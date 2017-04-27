@@ -1,0 +1,22 @@
+To re-train inception model, we use the following script inside tensorflow’s docker image:
+
+
+python tensorflow/examples/image_retraining/retrain.py \
+--bottleneck_dir=/tf_files/bottlenecks \
+--model_dir=/tf_files/inception \
+--output_graph=/tf_files/retrained_graph.pb \
+--output_labels=/tf_files/retrained_labels.txt \
+--image_dir /tf_files/flower_photos
+
+
+
+# tf_files : a folder containing a folder called flower_photos that has the food images
+#            inside, this folder is where the generated files from retraining will be 
+#            saved.
+# inception : the trained model from google (the one we are going to re-train).
+# bottlenecks : represents the nodes of the inception layer right before the last 
+#               (softmax) layer, it will be re-computed when we retrain inception.
+# retrain.py : is the python script used by tensorflow to retrain inception.  
+# retrained_graph.pb : the retrained graph.
+# retrained_labels.txt : a text file containing the labels the different 11 categories of
+# food.
